@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 const Navbar = () => {
   let Links =[
-    {name:"SIGNUP",link:"/Signup"},
-    {name:"LOGIN",link:"/Login"},
+    {name:"SIGN UP",link:"/Signup"},
+    {name:"LOG IN",link:"/Login"},
   ];
   let [open,setOpen]=useState(false);
   
@@ -28,7 +28,7 @@ const Navbar = () => {
       {
         Links.map((link)=>(
           <li key={link.name} className='md:ml-8 text-l md:my-0 my-7 '>
-            <a href={link.link} className='text-gray-800 hover:text-[#68CA45] duration-500 text-bold'>{link.name}</a>
+            <a href={link.link} className='text-gray-800 hover:text-[#68CA45] duration-500 font-bold'>{link.name}</a>
           </li>
         ))
       }
