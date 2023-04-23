@@ -27,8 +27,8 @@ const Navbar = () => {
     <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
       {
         Links.map((link)=>(
-          <li key={link.name} className='md:ml-8 text-l md:my-0 my-7'>
-            <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+          <li key={link.name} className='md:ml-8 text-l md:my-0 my-7 '>
+            <a href={link.link} className='text-gray-800 hover:text-[#68CA45] duration-500 text-bold'>{link.name}</a>
           </li>
         ))
       }
