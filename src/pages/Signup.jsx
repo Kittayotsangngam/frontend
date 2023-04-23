@@ -1,75 +1,101 @@
 import React from "react";
 import { useState } from "react";
 const Signup = () => {
-  const [UnameOrEmail, setUnameOrEmail] = useState("");
+  const [Uname, setUname] = useState("");
   const [password, setpassword] = useState("");
+  const [Email, setEmail] = useState("");
+  const [passcon, setpasscon] = useState("");
+  const [Tel, setTel] = useState("");
 
-  const user = {
-    email: "test@test.com",
-    username: "test123",
-    password: "123456",
-  };
-  const handlesubmit = (e) => {
-    e.preventDefault();
-
-    if (UnameOrEmail === user.email || UnameOrEmail === user.username) {
-      if (password === user.password) {
-        console.log("User Loged In");
-      } else {
-        console.log("wrong password");
-      }
-    } else {
-      console.log("please check you username or Email");
-    }
-  };
+  
 
   return (
-    <div className="flex justify-content:space-evenly border-black-solid pt-16 ">
+    <div className="flex justify-content:space-evenly border-black-solid pt-16 bg-[#e5e5e5] ">
       <div className="w-2/5">
         <img
-          className="w-full h-screen"
+          className="w-full h-screen ml-44"
           src="https://sv1.picz.in.th/images/2023/04/23/y4yeaS.png"
           alt=""
         />
       </div>
-      <div className="w-3/5  mx-auto   bg-[#e5e5e5] flex justify-center items-center">
+      <div className="w-3/5  mx-auto   flex justify-center mt-12">
         <div>
-          <div className="text-3xl font-bold mb-3.5">Log in</div>
-          <form onSubmit={handlesubmit}>
+          <div className="text-3xl font-bold mb-3.5">Sign up</div>
+          <form onSubmit=''>
             <div className="form-group">
-              <label htmlFor="Email or UserName">Username or Email</label>
+              <label htmlFor="UserName" className="font-medium">Username</label>
               <div className="mb-3.5"></div>
               <input
+  
                 type="text"
                 required
-                value={UnameOrEmail}
-                onChange={(e) => setUnameOrEmail(e.target.value)}
-                className="Input h-9 w-56 "
+                value={Uname}
+                onChange={(e) => setUname(e.target.value)}
+                className="Input h-12 w-72 rounded-lg shadow-lg  indent-3"
               />
             </div>
             <div className="mb-3.5"></div>
             <div className="form-group">
-              <label htmlFor="Password">Password</label>
+              <label htmlFor="Email" className="font-medium">Email</label>
+              <div className="mb-3.5"></div>
+              <input
+                type="Email"
+                required
+                value={Email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="Input h-12 w-72 rounded-lg shadow-lg indent-3"
+              />
+            </div>
+            <div className="mb-3.5"></div>
+            <div className="form-group">
+              <label htmlFor="Tel" className="font-medium">Tel.</label>
+              <div className="mb-3.5"></div>
+              <input
+                type="Tel"
+                required
+                value={Tel}
+                onChange={(e) => setTel(e.target.value)}
+                className="Input h-12 w-72 rounded-lg shadow-lg indent-3"
+              />
+            </div>
+            <div className="mb-3.5"></div>
+            <div className="form-group">
+              <label htmlFor="Password" className="font-medium">Password</label>
               <div className="mb-3.5"></div>
               <input
                 type="Password"
                 required
                 value={password}
                 onChange={(e) => setpassword(e.target.value)}
-                className="Input h-9 w-56"
+                className="Input h-12 w-72 rounded-lg shadow-lg indent-3"
+              />
+            </div>
+            <div className="mb-3.5"></div>
+            <div className="form-group">
+              <label htmlFor="Passwordconfirm" className="font-medium">Password Confirmation</label>
+              <div className="mb-3.5"></div>
+              <input
+                type="Password"
+                required
+                value={passcon}
+                onChange={(e) => setpasscon(e.target.value)}
+                className="Input h-12 w-72 rounded-lg shadow-lg indent-3"
               />
             </div>
             <div className="mb-9"></div>
-            <div className="flex justify-center mb-9">
+            <div className="flex justify-center mb-3 ">
               <button
                 type="submit"
-                className="bg-[#FFAA3B] rounded-3xl w-32 h-8 text-white flex justify-center items-center"
+                className="bg-[#FFAA3B] rounded-3xl w-32 h-8 text-white flex justify-center items-center hover:shadow-lg"
               >
-                Log in
+                Create Account
               </button>
             </div>
-            <div className="">
-            </div>
+            <a href="/Login"> 
+            <div className=" flex justify-center items-center hover:underline">
+            Already have account? <span className="text-[#FFAA3B] indent-1"> Log in</span>
+            </div></a>
+           
           </form>
         </div>
       </div>

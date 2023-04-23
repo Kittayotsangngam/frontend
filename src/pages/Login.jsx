@@ -24,7 +24,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-content:space-evenly border-black-solid pt-16 bg-[#e5e5e5]">
+    <div className="flex justify-content:space-evenly border-black-solid pt-16 bg-[#e5e5e5] ">
       <div className="w-2/5">
         <img
           className="w-full h-screen ml-44"
@@ -36,19 +36,20 @@ const Login = () => {
         <div>
           <div className="text-3xl font-bold mb-3.5">Log in</div>
           <form onSubmit={handlesubmit}>
-            <div className="form-group">
+            <div className="form-group font-medium">
               <label htmlFor="Email or UserName">Username or Email</label>
               <div className="mb-3.5"></div>
               <input
+  
                 type="text"
                 required
                 value={UnameOrEmail}
                 onChange={(e) => setUnameOrEmail(e.target.value)}
-                className="Input h-12 w-72 rounded-lg shadow-lg"
+                className="Input h-12 w-72 rounded-lg shadow-lg  indent-3"
               />
             </div>
             <div className="mb-3.5"></div>
-            <div className="form-group">
+            <div className="form-group font-medium">
               <label htmlFor="Password">Password</label>
               <div className="mb-3.5"></div>
               <input
@@ -56,22 +57,21 @@ const Login = () => {
                 required
                 value={password}
                 onChange={(e) => setpassword(e.target.value)}
-                className="Input h-12 w-72 rounded-lg shadow-lg"
+                className="Input h-12 w-72 rounded-lg shadow-lg indent-3"
               />
             </div>
             <div className="mb-9"></div>
             <div className="flex justify-center mb-9 ">
               <button
                 type="submit"
-                className="bg-[#FFAA3B] rounded-3xl w-32 h-8 text-white flex justify-center items-center shadow-lg"
-              >
+                className="bg-[#FFAA3B] rounded-3xl w-32 h-8 text-white flex justify-center items-center  hover:shadow-lg">
                 Log in
               </button>
             </div>
             <a href="/Signup"> 
-            <div className="underline flex justify-center items-center ">
+            <div className="flex justify-center items-center hover:underline indent-1">
               Don’t have an account?
-              <span className="text-[#FFAA3B]">Sign up</span>
+              <span className="text-[#FFAA3B]"> Sign up</span>
             </div></a>
            
           </form>
